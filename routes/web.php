@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Routes for Threads
 Route::get('/threads', 'ThreadController@index');
 Route::get('/threads/{thread}', 'ThreadController@show');
 
+// Routes for Auth
 Auth::routes();
 
+// Routes for static pages
 Route::get('/home', 'HomeController@index')->name('home');
